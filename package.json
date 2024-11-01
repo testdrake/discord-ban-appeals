@@ -3,5 +3,8 @@
     "dependencies": {
         "jsonwebtoken": "^9.0.0",
         "node-fetch": "^3.2.10"
+    },
+    "scripts": {
+        "build": "node --unhandled-rejections=strict build.js"
     }
 }
