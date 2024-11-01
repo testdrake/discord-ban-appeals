@@ -8,15 +8,37 @@
         <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
 
-        <title>Ban appeal</title>
+        <title>Ban Appeal</title>
+        <style>
+            .header-space {
+                margin-top: 100px; 
+                margin-bottom: 20px; 
+            }
+            #login {
+                margin-top: 10px;
+            }
+        </style>
     </head>
-    <body class="h-100 d-flex flex-column justify-content-center align-items-stretch">
-        <div class="jumbotron text-center mb-0">
-            <h1>Ban appeal</h1>
+    <body class="h-100 d-flex flex-column align-items-center justify-content-center">
+       
+        <header class="text-center mb-4 header-space">
+            <h1 class="page-title"><b>Ban Appeal</b></h1>
+        </header>
+
+        <div class="flex-fill text-center d-flex justify-content-center align-items-center">
+            <a class="btn btn-primary" id="login" href="/.netlify/functions/oauth">Login with Discord</a>
         </div>
 
-        <div class="flex-fill text-center d-flex h-100 justify-content-center align-items-center">
-            <a class="btn" id="login" style="font-size: 2rem;" href="/.netlify/functions/oauth">Login with Discord</a>
-        </div>
+        <footer>
+            <p>&copy; 2024 Horizon Development</p>
+            <p>
+                <a href="https://yourserverlink.com/privacy-policy">Privacy Policy</a> |
+                <a href="https://yourserverlink.com/terms-of-service">Terms of Service</a>
+            </p>
+        </footer>
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJx0Ll6aBOa8b7Zl9VABMELRC3+Mmr1z6tztFTO8eDk4eE" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgEPmAqkwE1qqjXh6NfIft/4L57T3GqL9NsO3+FY4l2BQvZ6jIW3" crossorigin="anonymous"></script>
     </body>
 </html>
