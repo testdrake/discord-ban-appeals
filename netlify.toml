@@ -5,15 +5,6 @@
 
 [build.environment]
   AWS_LAMBDA_JS_RUNTIME = "nodejs20.x"
-
-[build.processing]
-  html = { pretty_urls = true }
-
-[functions]
-  node_bundler = "esbuild"
-
-# Use the environment section for sensitive information
-[build.environment]
   DISCORD_CLIENT_ID = "Your Discord App's client ID"
   DISCORD_CLIENT_SECRET = "Your Discord App's client secret"
   DISCORD_BOT_TOKEN = "Your Discord Bot Token"
@@ -21,4 +12,8 @@
   APPEALS_CHANNEL = "ID of the channel used for appeal form submission"
   JWT_SECRET = "JSON Web Token secret, mash keyboard plz"
 
-# You can also remove the template.environment section as it's generally used for templates and isn't needed here.
+[build.processing]
+  html = { pretty_urls = true }
+
+[functions]
+  node_bundler = "esbuild"
