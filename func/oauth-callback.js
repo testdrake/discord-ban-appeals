@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 
-import { getUserInfo, getBan, isBlocked } from "./helpers/user-helpers.js";
+import { getUserInfo, isBlocked } from "./helpers/user-helpers.js";
 import { createJwt } from "./helpers/jwt-helpers.js";
 
 function parseCookies(str) {
@@ -60,18 +60,6 @@ export async function handler(event, context) {
                         "Location": `/error?msg=${encodeURIComponent("You cannot submit ban appeals with this Discord account.")}`,
                     },
                 };
-            }
-    
-            if (process.env.GUILD_ID && !process.env.SKIP_BAN_CHECK && !process.env.DISCORD_WEBHOOK_URL) {
-                const ban = await getBan(user.id, process.env.GUILD_ID, process.env.DISCORD_BOT_TOKEN);
-                if (ban === null) {
-                    return {
-                        statusCode: 303,
-                        headers: {
-                            "Location": "/error"
-                        }
-                    };
-                }
             }
     
             const userPublic = {
