@@ -1,67 +1,96 @@
-body {
-    background: #36393f;
 
+body {
+    background: #000;
     font-family: 'Fira Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
 }
+
 
 .jumbotron {
-    background: #2f3136;
+    background: #1e1e1e;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+
 h1 {
-    color: white;
+    color: #fff;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 1em;
 }
+
 
 h2, p {
     color: #b9bbbe;
+    font-size: 1.1em;
+    text-align: center;
 }
 
+
 a {
-    color: hsl(197,100%,47.8%);
+    color: hsl(250, 100%, 75%);
+    text-decoration: none;
 }
+
+a:hover {
+    color: hsl(250, 100%, 85%);
+}
+
 
 button, a.btn {
     color: white !important;
-    background-color: hsl(235,85.6%,64.7%) !important;
+    background-color: hsl(250, 70%, 60%) !important;
     border: none !important;
     box-shadow: none !important;
-
-    transition: background-color .17s ease;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color .2s ease;
+    text-decoration: none;
 }
 
 button:hover, a.btn:hover {
-    background-color: hsl(235,51.4%,52.4%) !important;
+    background-color: hsl(250, 65%, 55%) !important;
 }
 
 button:active, a.btn:active {
-    background-color: hsl(235,46.7%,44.1%) !important;
+    background-color: hsl(250, 60%, 50%) !important;
 }
 
+
 label {
-    color: #8e9297;
+    color: #a0a4ab;
+    font-weight: 500;
 }
+
 
 label.radio {
     position: relative;
     display: block;
     padding: 10px;
-
     border-radius: 4px;
-    background-color: #2f3136;
-    color: #b9bbbe;
-
+    background-color: #2e3339;
+    color: #c9ccd1;
     margin-bottom: 8px;
-
     cursor: pointer;
 }
 
 label.radio:hover {
-    background-color: rgba(79,84,92,0.16);
-    color: #dcddde;
+    background-color: rgba(50, 54, 60, 0.18);
+    color: #e0e3e7;
 }
 
 label.radio.checked {
-    background-color: #202225;
+    background-color: #1f2227;
     color: #ffffff;
 }
 
@@ -69,7 +98,6 @@ label.radio > span:not(.checkmark) {
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
-
     margin-left: 32px;
 }
 
@@ -86,15 +114,12 @@ label.radio > .checkmark {
     height: 20px;
     width: 20px;
     padding: 3px;
-
     border-radius: 50%;
-    border-width: 2px;
-    border-color: #b9bbbe;
-    border-style: solid;
+    border: 2px solid #c9ccd1;
 }
 
 label.radio:hover > .checkmark {
-    border-color: #dcddde;
+    border-color: #e0e3e7;
 }
 
 label.radio.checked > .checkmark {
@@ -109,43 +134,43 @@ label.radio > .checkmark > span {
 }
 
 label.radio.checked > .checkmark > span {
-    background-color: hsl(235,86.1%,77.5%);
+    background-color: hsl(250, 70%, 60%);
 }
 
-select {
-    background-color: #2f3136 !important;
 
-    border: 1px solid #202225 !important;
+select {
+    background-color: #2e3339 !important;
+    border: 1px solid #1f2227 !important;
     cursor: pointer !important;
-    color: #dcddde !important;
+    color: #e0e3e7 !important;
     border-radius: 4px !important;
     font-weight: 500 !important;
-
     outline: none !important;
     box-shadow: none !important;
+    padding: 8px;
 }
 
 select:invalid {
-    color: #72767d !important;
+    color: #7c828a !important;
 }
+
 
 option {
-    color: #b9bbbe;
+    color: #d1d5db;
 }
 
-textarea {
-    color: #dcddde !important;
 
+textarea {
+    color: #e0e3e7 !important;
     background: rgba(0, 0, 0, 0.1) !important;
     border: 1px solid rgba(0, 0, 0, 0.3) !important;
-
     outline: none !important;
     box-shadow: none !important;
-
     transition: border-color .2s ease-in-out;
     resize: none;
-
     overflow-y: hidden;
+    border-radius: 4px;
+    padding: 8px;
 }
 
 textarea:hover {
@@ -153,8 +178,9 @@ textarea:hover {
 }
 
 textarea:focus {
-    border-color: hsl(197,100%,47.8%) !important;
+    border-color: hsl(250, 100%, 70%) !important;
 }
+
 
 .textInput {
     position: relative;
@@ -167,13 +193,45 @@ textarea:focus {
     font-size: 12px;
     font-family: monospace;
     pointer-events: none;
-    color: #72767d;
+    color: #7c828a;
 }
 
 .lowOnSpace {
-    color: #f36c6c;
+    color: #ff6b6b;
 }
+
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: hsl(250, 70%, 60%);
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+footer a {
+    color: hsl(250, 70%, 60%);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
 
 #username {
     color: white;
+}
+
+
+.header-space {
+    margin-top: 100px; 
+    margin-bottom: 10px; 
+}
+
+#login {
+    margin-top: 10px; 
 }
